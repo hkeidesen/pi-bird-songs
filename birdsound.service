@@ -1,0 +1,12 @@
+[Unit]
+Description=Play Bird Sounds
+
+[Service]
+User=hk
+Environment="XDG_RUNTIME_DIR=/run/user/1000"
+ExecStartPre=/bin/sleep 5
+ExecStart=/bin/bash -c 'find /home/hk/Music/birdsounds -iname "*.mp3" | sort -V | xargs -I {} /usr/bin/mplayer -loop 0 {}'
+
+
+[Install]
+WantedBy=multi-user.target

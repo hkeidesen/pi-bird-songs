@@ -1,0 +1,12 @@
+  GNU nano 5.4                               /etc/systemd/system/bt_autoconnect.service
+[Unit]
+Description=Bluetooth Auto Connect
+
+[Service]
+ExecStart=/home/hk/connect_bluetooth.sh
+
+[Install]
+WantedBy=multi-user.target
+
+
+
